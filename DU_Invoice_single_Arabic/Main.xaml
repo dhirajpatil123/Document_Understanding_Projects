@@ -1,0 +1,510 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,5401.333333333333" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/documentunderstanding-ml" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p5="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p6="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p9="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Taxonomy</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.TaxonomyManagement</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Digitization</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.Vision.OCR</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.OCR.Contracts</x:String>
+      <x:String>UiPath.OCR.Activities</x:String>
+      <x:String>UiPath.OCR.Contracts.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Classification</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.ValidationStation</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Training</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.Storage</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Actions</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFImages</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.PDF.ExtractPDFText</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataValidation</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions.Abstractions</x:String>
+      <x:String>UiPath.Vision.OmniPage.Core</x:String>
+      <x:String>UiPath.OmniPage.Activities</x:String>
+      <x:String>UiPath.DocumentUnderstanding.ML.Activities.Editors</x:String>
+      <x:String>UiPath.Core.Activities.OCR.Engines</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.Core</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.Vision.OmniPage.Core</AssemblyReference>
+      <AssemblyReference>UiPath.OmniPage.Activities</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="848,5336.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="p9:DocumentTaxonomy" Name="Taxonomy" />
+      <Variable x:TypeArguments="x:String" Name="DocumentText" />
+      <Variable x:TypeArguments="p5:Document" Name="DOM" />
+      <Variable x:TypeArguments="p7:ClassificationResult[]" Name="Classification_Results" />
+      <Variable x:TypeArguments="p7:ExtractionResult" Name="ExtractionResults" />
+      <Variable x:TypeArguments="p7:ExtractionResult" Name="ValidationExtractionResults" />
+      <Variable x:TypeArguments="sd2:DataSet" Name="DataSet" />
+      <Variable x:TypeArguments="sd2:DataTable" Name="dt_InvoiceDetails" />
+      <Variable x:TypeArguments="s:String[]" Name="File_Path" />
+      <Variable x:TypeArguments="x:Boolean" Name="ValidationError" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Assign sap:VirtualizedContainerService.HintSize="786,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[File_Path]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[Directory.GetFiles("D:\CyberMeru Projects\DU_Invoice_single_Arabic\Input")]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="786,108" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_1" Taxonomy="[Taxonomy]" />
+    <ui:BuildDataTable DataTable="[dt_InvoiceDetails]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="786,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Bill_x0020_From&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Invoice_x0020_Date&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total_x0020_Amount&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;VAT_x0020_Number&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Bill_x0020_Address&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="786,4309.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[File_Path]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="752,4119.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:Image" Name="Image" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Digitization" sap:VirtualizedContainerService.HintSize="710,554" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[DocumentPath]" DocumentText="[DocumentText]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="388,307.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_1">
+                <p:DigitizeDocument.OCREngine>
+                  <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+                    <ActivityFunc.Argument1>
+                      <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                    </ActivityFunc.Argument1>
+                    <ActivityFunc.Argument2>
+                      <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                    </ActivityFunc.Argument2>
+                    <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="siD/r6fwj3h+04YIe0lDQxe0ROO41FzSpH54l7DTKmBlXkgygol/qE0I5lNghwQoS9ofxlzfGdHD63YQrj53NA==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_2" Image="[Image]" Language="auto" NoopExecution="False" PredictionId="[PredictionId]" Profile="None" Scale="1" Timeout="100000" />
+                  </ActivityFunc>
+                </p:DigitizeDocument.OCREngine>
+              </p:DigitizeDocument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,96" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Digitization Completed for doc- &quot;+Path.GetFileName(DocumentPath)]" />
+            </Sequence>
+            <Sequence DisplayName="Classification" sap:VirtualizedContainerService.HintSize="710,656.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <p2:ClassifyDocumentScope ClassificationResults="[Classification_Results]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[DocumentPath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="478,410" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_1" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIff4b0cc1d62c44b8a05eeaafae397d06&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Ticket.Flight.Handwritten&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;Ticket.Flight.Handwritten&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UIff4b0cc1d62c44b8a05eeaafae397d06&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIff4b0cc1d62c44b8a05eeaafae397d06&quot;:[]}}">
+                <p2:ClassifyDocumentScope.Classifiers>
+                  <p3:GenerativeClassifier DisplayName="Generative Classifier" sap:VirtualizedContainerService.HintSize="234,76" sap2010:WorkflowViewState.IdRef="GenerativeClassifier_1" PersistenceId="UIff4b0cc1d62c44b8a05eeaafae397d06" Prompt="[{&quot;id&quot;:&quot;Ticket.Flight.Handwritten&quot;,&quot;name&quot;:&quot;Invoice&quot;,&quot;prompt&quot;:&quot;Invoice Document&quot;}]" RetryOnFailure="True" Timeout="100000">
+                    <p3:GenerativeClassifier.ClassifierResult>
+                      <OutArgument x:TypeArguments="p4:ClassifierResult">
+                        <DelegateArgumentReference x:TypeArguments="p4:ClassifierResult">
+                          <DelegateOutArgument x:TypeArguments="p4:ClassifierResult" Name="ClassifierResult" />
+                        </DelegateArgumentReference>
+                      </OutArgument>
+                    </p3:GenerativeClassifier.ClassifierResult>
+                    <p3:GenerativeClassifier.DocumentObjectModel>
+                      <InArgument x:TypeArguments="p5:Document">
+                        <DelegateArgumentValue x:TypeArguments="p5:Document">
+                          <DelegateInArgument x:TypeArguments="p5:Document" Name="DocumentObjectModel" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p3:GenerativeClassifier.DocumentObjectModel>
+                    <p3:GenerativeClassifier.DocumentPath>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p3:GenerativeClassifier.DocumentPath>
+                    <p3:GenerativeClassifier.DocumentText>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p3:GenerativeClassifier.DocumentText>
+                    <p3:GenerativeClassifier.DocumentTypes>
+                      <InArgument x:TypeArguments="p4:ClassifierDocumentType[]">
+                        <DelegateArgumentValue x:TypeArguments="p4:ClassifierDocumentType[]">
+                          <DelegateInArgument x:TypeArguments="p4:ClassifierDocumentType[]" Name="DocumentTypes" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p3:GenerativeClassifier.DocumentTypes>
+                    <p3:GenerativeClassifier.PredictionId>
+                      <InArgument x:TypeArguments="x:String">
+                        <DelegateArgumentValue x:TypeArguments="x:String">
+                          <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                        </DelegateArgumentValue>
+                      </InArgument>
+                    </p3:GenerativeClassifier.PredictionId>
+                  </p3:GenerativeClassifier>
+                </p2:ClassifyDocumentScope.Classifiers>
+              </p2:ClassifyDocumentScope>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478,96" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Classification Completed for doc- &quot;+Path.GetFileName(DocumentPath)]" />
+            </Sequence>
+            <If Condition="[Classification_Results.Any]" DisplayName="If (Extraction)" sap:VirtualizedContainerService.HintSize="710,1090.6666666666667" sap2010:WorkflowViewState.IdRef="If_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="676,723.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p6:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[Classification_Results(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[DocumentPath]" DocumentText="[DocumentText]" ExtractionResult="[ExtractionResults]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="634,500" sap2010:WorkflowViewState.IdRef="DataExtractionScope_1" Taxonomy="[Taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI3f2cf3bc36044a1fb82f3f0985f7648e&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Ticket.Flight.Handwritten&quot;:{&quot;FieldMappings&quot;:{&quot;Ticket.Flight.Handwritten.AirlineName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.AirlineName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.SourceCountry&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.SourceCountry&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.DestinationCountry&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.DestinationCountry&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.VATNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.VATNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.BillAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.BillAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.Amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.Tax%&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Tax%&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.Value_Is_Taxable&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Value_Is_Taxable&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.An_Average&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.An_Average&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.ProductDescription&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductDescription&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.ProductID&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductID&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table.Serial&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Serial&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false}},&quot;ExtractorDocumentTypeId&quot;:null}}},&quot;UIf9ae29e6f97a444290a043b0aa323d11&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;Ticket.Flight.Handwritten&quot;:{&quot;FieldMappings&quot;:{&quot;Ticket.Flight.Handwritten.AirlineName&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.AirlineName&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.SourceCountry&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.SourceCountry&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.DestinationCountry&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.DestinationCountry&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Price&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Price&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.VATNumber&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.VATNumber&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.BillAddress&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.BillAddress&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:false},&quot;Ticket.Flight.Handwritten.Items_Table&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.Amount&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Amount&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.Tax%&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Tax%&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.Value_Is_Taxable&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Value_Is_Taxable&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.Quantity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Quantity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.An_Average&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.An_Average&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.ProductDescription&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductDescription&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.ProductID&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductID&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;Ticket.Flight.Handwritten.Items_Table.Serial&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Serial&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UIf9ae29e6f97a444290a043b0aa323d11&quot;:&quot;0&quot;,&quot;UI3f2cf3bc36044a1fb82f3f0985f7648e&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI3f2cf3bc36044a1fb82f3f0985f7648e&quot;:[],&quot;UIf9ae29e6f97a444290a043b0aa323d11&quot;:[]}}">
+                    <p6:DataExtractionScope.Extractors>
+                      <p3:GenerativeExtractor DisplayName="Generative Extractor" sap:VirtualizedContainerService.HintSize="234,166" sap2010:WorkflowViewState.IdRef="GenerativeExtractor_1" PersistenceId="UI3f2cf3bc36044a1fb82f3f0985f7648e" Prompt="{}{&quot;Ticket.Flight.Handwritten.AirlineName&quot;:&quot;Identification code assign to a specific invoice.Extract invoice number, If available in arabic extract invoice number&quot;,&quot;Ticket.Flight.Handwritten.SourceCountry&quot;:&quot;first if avialable in english extract Invoice Billing from name, but not avialable in english available in arabic extract Billing from name&quot;,&quot;Ticket.Flight.Handwritten.DestinationCountry&quot;:&quot;Invoice Date from invoice, If available in arabic extract invoice Date&quot;,&quot;Ticket.Flight.Handwritten.Price&quot;:&quot;Total Amount from Invoice, if available in words in dirham extract total amount&quot;,&quot;Ticket.Flight.Handwritten.VATNumber&quot;:&quot;Sender VAT Number from Invoice, If avilable in arabic extract VAT Number from Invoice&quot;,&quot;Ticket.Flight.Handwritten.BillAddress&quot;:&quot;bill from address from invoice, if available in arabic extract bill from address&quot;}" RetryOnFailure="True" Timeout="100000">
+                        <p3:GenerativeExtractor.DocumentBounds>
+                          <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                            <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                              <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.DocumentBounds>
+                        <p3:GenerativeExtractor.DocumentObjectModel>
+                          <InArgument x:TypeArguments="p5:Document">
+                            <DelegateArgumentValue x:TypeArguments="p5:Document">
+                              <DelegateInArgument x:TypeArguments="p5:Document" Name="DocumentObjectModel" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.DocumentObjectModel>
+                        <p3:GenerativeExtractor.DocumentPath>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.DocumentPath>
+                        <p3:GenerativeExtractor.DocumentText>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.DocumentText>
+                        <p3:GenerativeExtractor.ExtractorDocumentType>
+                          <InArgument x:TypeArguments="p8:ExtractorDocumentType">
+                            <DelegateArgumentValue x:TypeArguments="p8:ExtractorDocumentType">
+                              <DelegateInArgument x:TypeArguments="p8:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.ExtractorDocumentType>
+                        <p3:GenerativeExtractor.ExtractorResult>
+                          <OutArgument x:TypeArguments="p8:ExtractorResult">
+                            <DelegateArgumentReference x:TypeArguments="p8:ExtractorResult">
+                              <DelegateOutArgument x:TypeArguments="p8:ExtractorResult" Name="ExtractorResult" />
+                            </DelegateArgumentReference>
+                          </OutArgument>
+                        </p3:GenerativeExtractor.ExtractorResult>
+                        <p3:GenerativeExtractor.PredictionId>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p3:GenerativeExtractor.PredictionId>
+                      </p3:GenerativeExtractor>
+                      <p6:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="siD/r6fwj3h+04YIe0lDQxe0ROO41FzSpH54l7DTKmBlXkgygol/qE0I5lNghwQoS9ofxlzfGdHD63YQrj53NA==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="234,166" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UIf9ae29e6f97a444290a043b0aa323d11" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;Ticket.Flight.Handwritten&quot;,&quot;FormId&quot;:&quot;31e972b7&quot;,&quot;FormName&quot;:&quot;Invoice_Arabic&quot;,&quot;OriginalFileExtension&quot;:&quot;jpg&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,752.0,973.0],&quot;SkewAngle&quot;:-0.1,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;مشرق&quot;,&quot;Box&quot;:[29.0,337.0,60.0,28.0]},{&quot;Text&quot;:&quot;التجار&quot;,&quot;Box&quot;:[29.0,276.0,55.0,27.0]},{&quot;Text&quot;:&quot;ذ&quot;,&quot;Box&quot;:[27.0,260.0,12.0,23.0]},{&quot;Text&quot;:&quot;إدراج&quot;,&quot;Box&quot;:[38.0,626.0,52.0,29.0]},{&quot;Text&quot;:&quot;م&quot;,&quot;Box&quot;:[38.0,242.0,12.0,20.0]},{&quot;Text&quot;:&quot;م&quot;,&quot;Box&quot;:[38.0,224.0,13.0,21.0]},{&quot;Text&quot;:&quot;الشعار&quot;,&quot;Box&quot;:[69.0,617.0,60.0,27.0]},{&quot;Text&quot;:&quot;TRN:&quot;,&quot;Box&quot;:[118.0,292.0,41.0,15.0]}],&quot;Fields&quot;:[],&quot;Tables&quot;:[{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table&quot;,&quot;Headers&quot;:[{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Amount&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Tax%&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Value_Is_Taxable&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Quantity&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.An_Average&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductDescription&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.ProductID&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]},{&quot;FieldId&quot;:&quot;Ticket.Flight.Handwritten.Items_Table.Serial&quot;,&quot;Box&quot;:[0.0,0.0,0.0,0.0]}],&quot;Cells&quot;:[{&quot;Row&quot;:0,&quot;Column&quot;:0,&quot;Box&quot;:[278.0387,40.3988,98.8856,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:1,&quot;Box&quot;:[278.0387,139.2844,51.0926,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:2,&quot;Box&quot;:[278.0387,190.377,80.7976,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:3,&quot;Box&quot;:[278.0387,271.1746,64.1628,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:4,&quot;Box&quot;:[278.0387,335.3373,89.115,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:5,&quot;Box&quot;:[278.0387,424.4523,160.407,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:6,&quot;Box&quot;:[278.0387,584.8593,81.9858,18.292]},{&quot;Row&quot;:0,&quot;Column&quot;:7,&quot;Box&quot;:[278.0387,666.845,43.3693,18.292]},{&quot;Row&quot;:1,&quot;Column&quot;:0,&quot;Box&quot;:[296.3307,40.3988,98.8856,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:1,&quot;Box&quot;:[296.3307,139.2844,51.0926,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:2,&quot;Box&quot;:[296.3307,190.377,80.7976,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:3,&quot;Box&quot;:[296.3307,271.1746,64.1628,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:4,&quot;Box&quot;:[296.3307,335.3373,89.115,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:5,&quot;Box&quot;:[296.3307,424.4523,160.407,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:6,&quot;Box&quot;:[296.3307,584.8593,81.9858,23.7909]},{&quot;Row&quot;:1,&quot;Column&quot;:7,&quot;Box&quot;:[296.3307,666.845,43.3693,23.7909]},{&quot;Row&quot;:2,&quot;Column&quot;:0,&quot;Box&quot;:[320.1216,40.3988,98.8856,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:1,&quot;Box&quot;:[320.1216,139.2844,51.0926,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:2,&quot;Box&quot;:[320.1216,190.377,80.7976,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:3,&quot;Box&quot;:[320.1216,271.1746,64.1628,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:4,&quot;Box&quot;:[320.1216,335.3373,89.115,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:5,&quot;Box&quot;:[320.1216,424.4523,160.407,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:6,&quot;Box&quot;:[320.1216,584.8593,81.9858,29.9972]},{&quot;Row&quot;:2,&quot;Column&quot;:7,&quot;Box&quot;:[320.1216,666.845,43.3693,29.9972]},{&quot;Row&quot;:3,&quot;Column&quot;:0,&quot;Box&quot;:[350.1189,40.3988,98.8856,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:1,&quot;Box&quot;:[350.1189,139.2844,51.0926,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:2,&quot;Box&quot;:[350.1189,190.377,80.7976,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:3,&quot;Box&quot;:[350.1189,271.1746,64.1628,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:4,&quot;Box&quot;:[350.1189,335.3373,89.115,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:5,&quot;Box&quot;:[350.1189,424.4523,160.407,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:6,&quot;Box&quot;:[350.1189,584.8593,81.9858,28.9629]},{&quot;Row&quot;:3,&quot;Column&quot;:7,&quot;Box&quot;:[350.1189,666.845,43.3693,28.9629]},{&quot;Row&quot;:4,&quot;Column&quot;:0,&quot;Box&quot;:[379.0817,40.3988,98.8856,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:1,&quot;Box&quot;:[379.0817,139.2844,51.0926,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:2,&quot;Box&quot;:[379.0817,190.377,80.7976,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:3,&quot;Box&quot;:[379.0817,271.1746,64.1628,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:4,&quot;Box&quot;:[379.0817,335.3373,89.115,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:5,&quot;Box&quot;:[379.0817,424.4523,160.407,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:6,&quot;Box&quot;:[379.0817,584.8593,81.9858,27.9285]},{&quot;Row&quot;:4,&quot;Column&quot;:7,&quot;Box&quot;:[379.0817,666.845,43.3693,27.9285]},{&quot;Row&quot;:5,&quot;Column&quot;:0,&quot;Box&quot;:[407.0102,40.3988,98.8856,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:1,&quot;Box&quot;:[407.0102,139.2844,51.0926,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:2,&quot;Box&quot;:[407.0102,190.377,80.7976,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:3,&quot;Box&quot;:[407.0102,271.1746,64.1628,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:4,&quot;Box&quot;:[407.0102,335.3373,89.115,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:5,&quot;Box&quot;:[407.0102,424.4523,160.407,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:6,&quot;Box&quot;:[407.0102,584.8593,81.9858,29.9972]},{&quot;Row&quot;:5,&quot;Column&quot;:7,&quot;Box&quot;:[407.0102,666.845,43.3693,29.9972]},{&quot;Row&quot;:6,&quot;Column&quot;:0,&quot;Box&quot;:[437.0074,40.3988,98.8856,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:1,&quot;Box&quot;:[437.0074,139.2844,51.0926,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:2,&quot;Box&quot;:[437.0074,190.377,80.7976,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:3,&quot;Box&quot;:[437.0074,271.1746,64.1628,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:4,&quot;Box&quot;:[437.0074,335.3373,89.115,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:5,&quot;Box&quot;:[437.0074,424.4523,160.407,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:6,&quot;Box&quot;:[437.0074,584.8593,81.9858,28.9629]},{&quot;Row&quot;:6,&quot;Column&quot;:7,&quot;Box&quot;:[437.0074,666.845,43.3693,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:0,&quot;Box&quot;:[465.9703,40.3988,98.8856,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:1,&quot;Box&quot;:[465.9703,139.2844,51.0926,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:2,&quot;Box&quot;:[465.9703,190.377,80.7976,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:3,&quot;Box&quot;:[465.9703,271.1746,64.1628,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:4,&quot;Box&quot;:[465.9703,335.3373,89.115,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:5,&quot;Box&quot;:[465.9703,424.4523,160.407,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:6,&quot;Box&quot;:[465.9703,584.8593,81.9858,28.9629]},{&quot;Row&quot;:7,&quot;Column&quot;:7,&quot;Box&quot;:[465.9703,666.845,43.3693,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:0,&quot;Box&quot;:[494.9332,40.3988,98.8856,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:1,&quot;Box&quot;:[494.9332,139.2844,51.0926,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:2,&quot;Box&quot;:[494.9332,190.377,80.7976,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:3,&quot;Box&quot;:[494.9332,271.1746,64.1628,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:4,&quot;Box&quot;:[494.9332,335.3373,89.115,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:5,&quot;Box&quot;:[494.9332,424.4523,160.407,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:6,&quot;Box&quot;:[494.9332,584.8593,81.9858,28.9629]},{&quot;Row&quot;:8,&quot;Column&quot;:7,&quot;Box&quot;:[494.9332,666.845,43.3693,28.9629]},{&quot;Row&quot;:9,&quot;Column&quot;:0,&quot;Box&quot;:[523.896,40.3988,98.8856,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:1,&quot;Box&quot;:[523.896,139.2844,51.0926,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:2,&quot;Box&quot;:[523.896,190.377,80.7976,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:3,&quot;Box&quot;:[523.896,271.1746,64.1628,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:4,&quot;Box&quot;:[523.896,335.3373,89.115,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:5,&quot;Box&quot;:[523.896,424.4523,160.407,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:6,&quot;Box&quot;:[523.896,584.8593,81.9858,29.9972]},{&quot;Row&quot;:9,&quot;Column&quot;:7,&quot;Box&quot;:[523.896,666.845,43.3693,29.9972]},{&quot;Row&quot;:10,&quot;Column&quot;:0,&quot;Box&quot;:[553.8933,40.3988,98.8856,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:1,&quot;Box&quot;:[553.8933,139.2844,51.0926,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:2,&quot;Box&quot;:[553.8933,190.377,80.7976,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:3,&quot;Box&quot;:[553.8933,271.1746,64.1628,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:4,&quot;Box&quot;:[553.8933,335.3373,89.115,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:5,&quot;Box&quot;:[553.8933,424.4523,160.407,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:6,&quot;Box&quot;:[553.8933,584.8593,81.9858,114.7341]},{&quot;Row&quot;:10,&quot;Column&quot;:7,&quot;Box&quot;:[553.8933,666.845,43.3693,114.7341]}]}]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+                        <p6:FormExtractor.DocumentBounds>
+                          <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                            <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                              <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.DocumentBounds>
+                        <p6:FormExtractor.DocumentObjectModel>
+                          <InArgument x:TypeArguments="p5:Document">
+                            <DelegateArgumentValue x:TypeArguments="p5:Document">
+                              <DelegateInArgument x:TypeArguments="p5:Document" Name="DocumentObjectModel" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.DocumentObjectModel>
+                        <p6:FormExtractor.DocumentPath>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentPath" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.DocumentPath>
+                        <p6:FormExtractor.DocumentText>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="DocumentText" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.DocumentText>
+                        <p6:FormExtractor.ExtractorDocumentType>
+                          <InArgument x:TypeArguments="p8:ExtractorDocumentType">
+                            <DelegateArgumentValue x:TypeArguments="p8:ExtractorDocumentType">
+                              <DelegateInArgument x:TypeArguments="p8:ExtractorDocumentType" Name="ExtractorDocumentType" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.ExtractorDocumentType>
+                        <p6:FormExtractor.ExtractorResult>
+                          <OutArgument x:TypeArguments="p8:ExtractorResult">
+                            <DelegateArgumentReference x:TypeArguments="p8:ExtractorResult">
+                              <DelegateOutArgument x:TypeArguments="p8:ExtractorResult" Name="ExtractorResult" />
+                            </DelegateArgumentReference>
+                          </OutArgument>
+                        </p6:FormExtractor.ExtractorResult>
+                        <p6:FormExtractor.PredictionId>
+                          <InArgument x:TypeArguments="x:String">
+                            <DelegateArgumentValue x:TypeArguments="x:String">
+                              <DelegateInArgument x:TypeArguments="x:String" Name="PredictionId" />
+                            </DelegateArgumentValue>
+                          </InArgument>
+                        </p6:FormExtractor.PredictionId>
+                      </p6:FormExtractor>
+                    </p6:DataExtractionScope.Extractors>
+                  </p6:DataExtractionScope>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="634,96" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Data Extraction Completed for doc- &quot;+Path.GetFileName(DocumentPath)]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,183.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;Fail to classification for doc- &quot;+Path.GetFileName(DocumentPath)]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </If.Else>
+            </If>
+            <TryCatch DisplayName="Try Catch (Validate)" sap:VirtualizedContainerService.HintSize="710,621.3333333333334" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <TryCatch.Try>
+                <p:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DOM]" DocumentPath="[DocumentPath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="334,382" sap2010:WorkflowViewState.IdRef="PresentValidationStation_3" ShowOnlyRelevantPageRange="False" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[ValidationExtractionResults]" />
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                    <Sequence sap:VirtualizedContainerService.HintSize="496,321.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                      <Sequence.Variables>
+                        <Variable x:TypeArguments="x:String" Name="Exception_Info" />
+                      </Sequence.Variables>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Boolean">[ValidationError]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_7">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Exception_Info]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[exception.Message]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <If Condition="[ValidationError=False]" DisplayName="If (Export Result)" sap:VirtualizedContainerService.HintSize="710,949.3333333333334" sap2010:WorkflowViewState.IdRef="If_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,582" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:String" Name="ValidationError" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <p6:ExportExtractionResults DataSet="[DataSet]" DisplayName="Export Extraction Results" ExtractionResult="[ValidationExtractionResults]" sap:VirtualizedContainerService.HintSize="334,182" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False" />
+                  <ui:MergeDataTable Destination="[dt_InvoiceDetails]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="334,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_1" MissingSchemaAction="Add" Source="[DataSet.Tables(0)]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Exported Result For Document:  &quot;+Path.GetFileName(DocumentPath)]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376,183.33333333333334" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Validation Fail for doc- &quot;+Path.GetFileName(DocumentPath)]" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <ui:RemoveDataColumn Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Items_Table" DataTable="[dt_InvoiceDetails]" DisplayName="Remove Data Column" sap:VirtualizedContainerService.HintSize="786,191.33333333333334" sap2010:WorkflowViewState.IdRef="RemoveDataColumn_1" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[dt_InvoiceDetails]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="786,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="D:\CyberMeru Projects\DU_Invoice_single_Arabic\Output\Invoice_Details.xlsx" />
+    <ui:WriteRange StartingCell="{x:Null}" AddHeaders="True" DataTable="[DataSet.Tables(2)]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="786,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet2" WorkbookPath="D:\CyberMeru Projects\DU_Invoice_single_Arabic\Output\Invoice_Details.xlsx" />
+  </Sequence>
+</Activity>

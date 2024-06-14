@@ -1,0 +1,40 @@
+
+************************************ UiPath Document Understanding (Arabic Invoice Data Extraction )*****************************************************
+
+ Usecase: Usecase is like require to extract some details from invoice which is in the arabic langauge, First by opening invoice user is
+          manually reading invoice having in image format. Then user extract require details from invoice and filling that details in output
+          excel report file.
+
+ * we have one arabic invoice in project input folder and details require to extract from invoice are: 1)Invoice Number 2)Bill From  
+   3)Invoice Date 4)Total Amount 5)VAT Number 6)Bill Addresse & 7)Products Description table.
+
+ * In output folder we have excel report file, where require to fill extracted details as in given format.
+   Sheet1 --> ( All related invoice details ) & Sheet2 --> ( Product Description Table Deatils)
+
+ Steps That Robot will perform for data extraction:
+
+1) First bot will read input folder and fetch all available files from input folder for processing
+
+2) Then bot will call taxonomy structure (Project structure) that helps to extract data in well manner 
+
+3) Next step is bot will convert image into usefull text using OCR technology in digitization
+
+4) After digitization bot will classify document type as it is invoice in Classification (Identify Document type)
+
+5) Then Main part is data extraction with the help of A] generative extractor B] Form Extractor in Extraction Scope
+   A] Generative extractor : Using prompting bot will extract data for shown fields.
+   B] Form extractor       : Here we require to train bot for data extraction by highlighting table that we require to extract.
+
+6) If require human can interfere in automation for validation, To check data extracted correctly or not. This stage will appear in execution
+
+7) Last stage is bot will export that extracted data result in output report excel
+
+    Lets run the automation.    Bot is running.........
+
+    Check output result.
+
+*********************************************************** Thank You ***********************************************************************************
+
+
+
+  
