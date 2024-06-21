@@ -1,0 +1,37 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_PurchaseOrder&Sequence_1",
+        "str_FirstColumnName&Sequence_11",
+        "array_dtColumn&Sequence_11",
+        "Dt_classify&Sequence_11",
+        "dt_invoice&Sequence_1",
+        "ValidatedExtractionResults&Sequence_1",
+        "ExceptionInfo&Sequence_1",
+        "ValidationError&Sequence_1",
+        "DataSet&Sequence_11",
+        "ExtractionResults&Sequence_1",
+        "ClassificationResults&Sequence_1",
+        "DocumentText&Sequence_1",
+        "DOM&Sequence_1",
+        "File_Name&Sequence_1",
+        "Array_Files&Sequence_1",
+        "Taxonomy&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
