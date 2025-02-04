@@ -12,7 +12,7 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "str_Date&Sequence_1",
+        "str_date&Sequence_1",
         "FileName&Sequence_2",
         "ValidatedExtractionResult&Sequence_2",
         "ActionObject&Sequence_2",

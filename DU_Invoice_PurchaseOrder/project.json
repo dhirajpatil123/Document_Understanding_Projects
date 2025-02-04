@@ -1,14 +1,15 @@
 {
   "name": "DU_Multi_Document",
+  "projectId": "bcec6478-7779-40ab-97cf-846d00a18621",
   "description": "Blank Process",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.AdobePdfServices.IntegrationService.Activities": "[4.0.6]",
-    "UiPath.DocumentUnderstanding.ML.Activities": "[1.24.0]",
+    "UiPath.DocumentUnderstanding.ML.Activities": "[1.31.2]",
     "UiPath.Excel.Activities": "[2.20.1]",
-    "UiPath.IntelligentOCR.Activities": "[6.14.1]",
+    "UiPath.IntelligentOCR.Activities": "[6.22.1]",
     "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.OmniPage.Activities": "[1.17.0]",
+    "UiPath.OmniPage.Activities": "[1.20.0]",
     "UiPath.Persistence.Activities": "[1.5.5]",
     "UiPath.System.Activities": "[22.10.6]",
     "UiPath.Testing.Activities": "[23.4.0]",
@@ -48,7 +49,7 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
